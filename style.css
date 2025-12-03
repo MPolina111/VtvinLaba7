@@ -1,0 +1,219 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+.top-bar {
+    background: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom: 3px solid #e0dff5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 0px;
+}
+.logo img{
+    border-radius: 15px;
+}
+.search-block {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.search-block input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.phone-btn {
+    background: #ff9bc2;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.burger {
+    display: none;
+    margin-left: 15px;
+    background: #dfd9ff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 20px;
+    padding: 14px 20px;
+    background: #eeeaff;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE MENU */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+.dropdown-menu.open {
+    display: flex;
+    max-height: 250px;
+}
+
+.dropdown-menu a {
+    padding: 12px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* CARDS RETURNED TO OLD STYLE */
+.content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 340px;
+}
+
+/* Image slider */
+.card img.auto-slider {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Section */
+.card-text {
+    width: 55%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: auto;
+    padding: 10px 14px;
+    background: #c9b4ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: #eeeaff;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-block {
+    min-width: 200px;
+}
+
+.footer-block h4 {
+    margin-bottom: 10px;
+}
+
+.footer-block a {
+    display: block;
+    margin: 6px 0;
+    color: #444;
+    text-decoration: none;
+}
+
+.socials a {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background: #d8d2ff;
+    text-align: center;
+    padding: 12px;
+}
+.modal {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.map-block {
+    margin: 40px 0;
+}
+
+.map-block h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-window {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+}
+/* MOBILE */
+@media(max-width: 1000px) {
+
+    .search-block { display: none; }
+    .menu { display: none; }
+    .burger { display: block; }
+
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .card-text {
+        width: 100%;
+    }
+}

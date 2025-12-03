@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планировки квартир - ЖК Центральные Кварталы</title>
+    <link rel="stylesheet" href="plans.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../img/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo"><a href="#"><img src="../img/logo.svg" alt=""></a></div>
+    <div class="search-block">
+        <input type="text" placeholder="Поиск квартир...">
+    </div>
+    <button id="phoneBtn" class="phone-btn">📞</button>
+    <div id="burgerBtn" class="burger">☰</div>
+</header>
+
+<nav class="menu">
+    <a href="../index.html">Главная</a>
+    <a href="plans.html" style="background-color: #c9b4ff;">Планировки</a>
+    <a href="#mapSection">Локация</a>
+     <a href="#" id="contactsBtn">Контакты</a>
+</nav>
+<nav id="dropdownMenu" class="dropdown-menu">
+    <a href="index.html">Главная</a>
+    <a href="plans.html">Планировки</a>
+    <a href="#mapSection">Локация</a>
+    <a href="#" id="contactsBtnMobile">Контакты</a>
+</nav>
+<main class="plans-content">
+
+    <section class="plans-intro">
+        <h1>Планировки квартир ЖК "Центральные Кварталы"</h1>
+        <p>Выберите оптимальный вариант планировки для себя и своей семьи. Все квартиры оснащены современными удобствами.</p>
+    </section>
+
+    <section class="plans-grid">
+        <div class="plan-block">
+            <img src="https://picsum.photos/1200/700?random=41" alt="1-комнатная">
+            <h3>1-комнатная квартира</h3>
+            <p>Площадь: 45 м². Кухня-гостиная, просторная комната, балкон.</p>
+        </div>
+
+        <div class="plan-block">
+            <img src="https://picsum.photos/1200/700?random=42" alt="2-комнатная">
+            <h3>2-комнатная квартира</h3>
+            <p>Площадь: 65 м². Две спальни, кухня-гостиная, балкон, санузел.</p>
+        </div>
+
+        <div class="plan-block">
+            <img src="https://picsum.photos/1200/700?random=43" alt="3-комнатная">
+            <h3>3-комнатная квартира</h3>
+            <p>Площадь: 85 м². Три спальни, гостиная, два санузла, балкон.</p>
+        </div>
+
+        <div class="plan-block">
+            <img src="https://picsum.photos/1200/700?random=44" alt="Студия">
+            <h3>Студия</h3>
+            <p>Площадь: 30 м². Современная компактная планировка с кухней-гостиной.</p>
+        </div>
+    </section>
+
+    <section id="mapSection" class="map-block">
+        <h2>Локация ЖК</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.5321786918764!2d27.567!3d53.903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc5e057ad2f15%3A0x64f20f8e272b9d8c!2z0YPQuy4g0JzQsNC90YvQuSDQv9Cw0LvRjNC90YvQuSDQtNC10L3QuNC1INCc0L7RgNC-0YHQutC-0LLQuNGC0LjRgtCw0Y8!5e0!3m2!1sru!2sby!4v1630000000000!5m2!1sru!2sby" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-block">
+        <h4>Навигация</h4>
+        <a href="index.html">Главная</a>
+        <a href="plans.html">Планировки</a>
+        <a href="contacts.html">Контакты</a>
+    </div>
+
+    <div class="footer-block">
+        <h4>Покупателям</h4>
+        <a href="#">Ипотека</a>
+        <a href="#">Рассрочка</a>
+        <a href="#">Документы</a>
+    </div>
+
+    <div class="footer-block">
+        <h4>Соцсети</h4>
+        <div class="socials">
+            <a href="#">VK</a>
+            <a href="#">TG</a>
+            <a href="#">YT</a>
+        </div>
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    © 2025 ЖК. Все права защищены.
+</div>
+
+<!-- PHONE MODAL -->
+<div id="phoneModal" class="modal">
+    <div class="modal-window">
+        <h3>Телефон отдела продаж:</h3>
+        <p class="phone-number">+375 29 777 77 77</p>
+        <button id="closeModal" class="close-modal">Закрыть</button>
+    </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div id="contactModal" class="modal">
+    <div class="modal-window">
+        <h3>Контакты:</h3>
+        <p>Email: info@zhk.by</p>
+        <p>Телефон: +375 29 777 77 77</p>
+        <button id="closeContactModal" class="close-modal">Закрыть</button>
+    </div>
+</div>
+
+<script src="plans.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
