@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Планировки квартир - ЖК Центральные Кварталы</title>
-    <link rel="stylesheet" href="plans.css">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" href="../img/logo.svg" type="image/x-icon">
-    <link rel="shortcut icon" href="../img/logo.svg" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ЖК Центральные Кварталы</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="location.css">
+    <link rel="icon" href="img/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
 </head>
 <body>
-
 
 <header id="header" class="header">
     <div class="logo"><img src="../img/logo.svg" alt="logo" /></div>
@@ -24,54 +23,34 @@
 </header>
 
 <nav id="menu" class="menu" aria-label="Основная навигация">
-    <a href="../index.html" >Главная</a>
-    <a href="#" class="active">Планировки</a>
-    <a href="location.html">Локация</a>
+    <a href="../index.html">Главная</a>
+    <a href="plans.html">Планировки</a>
+    <a href="#"  class="active">Локация</a>
     <a href="#" id="contactsBtn">Контакты</a>
 </nav>
 
 <!-- Mobile dropdown (hidden by default) -->
 <nav id="dropdownMenu" class="dropdown-menu" aria-hidden="true">
     <a href="../index.html">Главная</a>
-    <a href="#plans">Планировки</a>
-    <a href="location.html">Локация</a>
+    <a href="plans.html">Планировки</a>
+    <a href="#">Локация</a>
     <a href="#" id="contactsBtnMobile">Контакты</a>
 </nav>
-<main class="plans-content">
 
-    <section class="plans-intro">
-        <h1>Планировки квартир ЖК "Центральные Кварталы"</h1>
-        <p>Выберите оптимальный вариант планировки для себя и своей семьи. Все квартиры оснащены современными удобствами.</p>
+<main id="main">
+    <section class="doma">
+        <div class="doma__block">
+             <h2 class="doma__naz">Карта местности ЖК</h2>
+        <img src="../img/Map.jpg" alt="" class="img__doma">
+        </div>
+       
     </section>
-
-    <section class="plans-grid">
-        <div class="plan-block">
-            <img src="../img/1k.png" alt="1-комнатная">
-            <h3>1-комнатная квартира</h3>
-            <p>Площадь: 45 м². Кухня-гостиная, просторная комната, балкон.</p>
-        </div>
-
-        <div class="plan-block">
-            <img src="../img/2k.png" alt="2-комнатная">
-            <h3>2-комнатная квартира</h3>
-            <p>Площадь: 65 м². Две спальни, кухня-гостиная, балкон, санузел.</p>
-        </div>
-
-        <div class="plan-block">
-            <img src="../img/3k.png" alt="3-комнатная">
-            <h3>3-комнатная квартира</h3>
-            <p>Площадь: 85 м². Три спальни, гостиная, два санузла, балкон.</p>
-        </div>
-
-        <div class="plan-block">
-            <img src="../img/studia.png" alt="Студия">
-            <h3>Студия</h3>
-            <p>Площадь: 30 м². Современная компактная планировка с кухней-гостиной.</p>
-        </div>
+    <section id="mapSection" class="map-block">
+        <h2>Локация ЖК</h2>
+        <iframe src="https://maps.google.com/maps?q=Minsk&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-
-
 </main>
+
 <footer class="footer" role="contentinfo">
    
     <div class="footer-col">
@@ -111,8 +90,6 @@
     </div>
 </div>
 
-<script src="plans.js"></script>
 <script src="../script.js"></script>
-
 </body>
 </html>

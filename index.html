@@ -1,174 +1,114 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ЖК Центральные Кварталы</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/logo.svg" type="image/x-icon">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
 </head>
 <body>
 
-<header class="top-bar">
-    <div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
+<header id="header" class="header">
+    <div class="logo"><img src="img/logo.svg" alt="logo" /></div>
+
     <div class="search-block">
-        <input type="text" placeholder="Поиск квартир...">
+        <input id="searchInput" type="text" placeholder="Поиск информации..." />
     </div>
-    <button id="phoneBtn" class="phone-btn">📞</button>
-    <div id="burgerBtn" class="burger">☰</div>
+
+    <button id="phoneBtn" class="phone-btn" aria-haspopup="dialog">📞</button>
+    <button id="burgerBtn" class="burger" aria-expanded="false" aria-controls="dropdownMenu">☰</button>
 </header>
 
-<nav class="menu">
-    <a href="index.html" style="background-color: #c9b4ff;">Главная</a>
+<nav id="menu" class="menu" aria-label="Основная навигация">
+    <a href="index.html" class="active">Главная</a>
     <a href="page/plans.html">Планировки</a>
-    <a href="#mapSection">Локация</a>
+    <a href="page/location.html">Локация</a>
     <a href="#" id="contactsBtn">Контакты</a>
 </nav>
 
-<nav id="dropdownMenu" class="dropdown-menu">
+<!-- Mobile dropdown (hidden by default) -->
+<nav id="dropdownMenu" class="dropdown-menu" aria-hidden="true">
     <a href="index.html">Главная</a>
-    <a href="plans.html">Планировки</a>
-    <a href="#mapSection">Локация</a>
+    <a href="page/plans.html">Планировки</a>
+    <a href="page/location.html">Локация</a>
     <a href="#" id="contactsBtnMobile">Контакты</a>
 </nav>
 
-<main class="content" >
-
+<main id="main">
     <!-- CARD 1 -->
-    <section class="card" id="card_section">
-        <img class="auto-slider"
-             data-images="https://picsum.photos/700/400?random=1,
-                          https://picsum.photos/700/400?random=5,
-                          https://picsum.photos/700/400?random=6"
-             src="https://picsum.photos/700/400?random=1">
-
+    <section class="card">
+        <div class="card-img">
+            <img class="auto-slider" data-images="img/dom1.jpg,img/dom2.jpg" src="img/dom3.jpg" alt="">
+        </div>
         <div class="card-text">
             <h3>Современные квартиры</h3>
-            <p>Светлые планировки, высокие потолки, панорамные окна.</p>
-            <button class="btn">Подробнее</button>
+            <p>Светлые планировки, высокие потолки, панорамные окна. Идеально для комфортной городской жизни — энергоэффективные технологии и продуманная планировка.</p>
         </div>
     </section>
 
     <!-- CARD 2 -->
     <section class="card">
-        <img class="auto-slider"
-             data-images="https://picsum.photos/700/400?random=2,
-                          https://picsum.photos/700/400?random=7,
-                          https://picsum.photos/700/400?random=9"
-             src="https://picsum.photos/700/400?random=2">
-
+        <div class="card-img">
+            <img class="auto-slider" data-images="img/ter1.jpg,img/ter2.jpg" src="img/ter4.jpg" alt="">
+        </div>
         <div class="card-text">
             <h3>Благоустроенная территория</h3>
-            <p>Закрытые дворы, детские площадки и прогулочные зоны.</p>
-            <button class="btn">Подробнее</button>
+            <p>Закрытые дворы, современные детские площадки, прогулочные зоны и уютные зеленые пространства — всё для спокойной жизни семьи.</p>
         </div>
     </section>
 
     <!-- CARD 3 -->
     <section class="card">
-        <img class="auto-slider"
-             data-images="https://picsum.photos/700/400?random=3,
-                          https://picsum.photos/700/400?random=8,
-                          https://picsum.photos/700/400?random=10"
-             src="https://picsum.photos/700/400?random=3">
-
+        <div class="card-img">
+            <img class="auto-slider" data-images="img/p1.jpg,img/p2.jpeg,img/p3.jpg" src="img/p4.jpeg" alt="">
+        </div>
         <div class="card-text">
             <h3>Подземный паркинг</h3>
-            <p>Тёплый паркинг, видеонаблюдение и безопасный доступ.</p>
-            <button class="btn">Подробнее</button>
+            <p>Тёплый и безопасный паркинг с видеонаблюдением и удобным доступом к подъездам.</p>
         </div>
     </section>
 
-    <!-- CARD 4 -->
-    <section class="card">
-        <img class="auto-slider"
-             data-images="https://picsum.photos/700/400?random=4,
-                          https://picsum.photos/700/400?random=11,
-                          https://picsum.photos/700/400?random=12"
-             src="https://picsum.photos/700/400?random=4">
-
-        <div class="card-text">
-            <h3>Фитнес-зал и спортплощадки</h3>
-            <p>Современные тренажёры и зоны для активного отдыха.</p>
-            <button class="btn">Подробнее</button>
-        </div>
-    </section>
-
-    <!-- CARD 5 -->
-    <section class="card">
-        <img class="auto-slider"
-             data-images="https://picsum.photos/700/400?random=13,
-                          https://picsum.photos/700/400?random=14,
-                          https://picsum.photos/700/400?random=15"
-             src="https://picsum.photos/700/400?random=13">
-
-        <div class="card-text">
-            <h3>Детская зона</h3>
-            <p>Безопасные площадки и развивающие игры для детей.</p>
-            <button class="btn">Подробнее</button>
-        </div>
-    </section>
-
-    <!-- MAP SECTION -->
-    <section id="mapSection" class="map-block">
-        <h2>Локация ЖК</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.5321786918764!2d27.567!3d53.903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc5e057ad2f15%3A0x64f20f8e272b9d8c!2z0YPQuy4g0JzQsNC90YvQuSDQv9Cw0LvRjNC90YvQuSDQtNC10L3QuNC1INCc0L7RgNC-0YHQutC-0LLQuNGC0LjRgtCw0Y8!5e0!3m2!1sru!2sby!4v1630000000000!5m2!1sru!2sby" 
-            width="100%" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"></iframe>
-    </section>
-
+   
 </main>
 
-<footer class="footer">
-    <div class="footer-block">
-        <h4>Навигация</h4>
-        <a href="index.html">Главная</a>
-        <a href="plans.html">Планировки</a>
-        <a href="contacts.html">Контакты</a>
-    </div>
-
-    <div class="footer-block">
+<footer class="footer" role="contentinfo">
+   
+    <div class="footer-col">
         <h4>Покупателям</h4>
         <a href="#">Ипотека</a>
-        <a href="#">Рассрочка</a>
         <a href="#">Документы</a>
+        <a href="#">Рассрочка</a>
     </div>
-
-    <div class="footer-block">
+    <div class="footer-col">
         <h4>Соцсети</h4>
         <div class="socials">
             <a href="#">VK</a>
             <a href="#">TG</a>
-            <a href="#">YT</a>
+            <a href="#">YouTube</a>
         </div>
     </div>
 </footer>
 
-<div class="footer-bottom">
-    © 2025 ЖК. Все права защищены.
-</div>
+<div class="footer-bottom">© 2025 ЖК. Все права защищены.</div>
 
 <!-- PHONE MODAL -->
-<div id="phoneModal" class="modal">
-    <div class="modal-window">
+<div id="phoneModal" class="modal" role="dialog" aria-hidden="true" aria-modal="true">
+    <div class="modal-window" role="document">
+        <button class="modal-close" id="closePhoneModal" aria-label="Закрыть модальное окно">✕</button>
         <h3>Телефон отдела продаж:</h3>
         <p class="phone-number">+375 29 777 77 77</p>
-        <button id="closeModal" class="close-modal">Закрыть</button>
     </div>
 </div>
 
 <!-- CONTACT MODAL -->
-<div id="contactModal" class="modal">
-    <div class="modal-window">
-        <h3>Контакты:</h3>
+<div id="contactModal" class="modal" role="dialog" aria-hidden="true" aria-modal="true">
+    <div class="modal-window" role="document">
+        <button class="modal-close" id="closeContactModal" aria-label="Закрыть модальное окно">✕</button>
+        <h3>Контакты</h3>
         <p>Email: info@zhk.by</p>
         <p>Телефон: +375 29 777 77 77</p>
-        <button id="closeContactModal" class="close-modal">Закрыть</button>
     </div>
 </div>
 

@@ -1,0 +1,14 @@
+.doma{
+    width: 1920px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.img__doma{
+    max-width: 100%;
+    width: 1000px;
+}
+.doma__naz{
+    font-size: 40px;
+}
